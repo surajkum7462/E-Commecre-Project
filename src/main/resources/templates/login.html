@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{base :: layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+</head>
+<body>
+	<section
+		style="background: linear-gradient(135deg, #007bff, #6610f2); color: #fff;">
+		<div
+			class="container d-flex align-items-center justify-content-center min-vh-100">
+			<div class="row login-container w-100">
+				<div class="col-md-6 login-image p-5">
+					<img src="img/ecom.png" class="img-fluid" alt="Login Image"
+						style="max-height: 400px; max-width: 100%;">
+				</div>
+				<div class="col-md-6 p-5">
+					<div class="text-center mb-4">
+						<h2 class="fw-bold text-dark-custom">Login</h2>
+						<p class="text-muted">Welcome back! Please login to your
+							account.</p>
+						<th:block th:if="${param.error}">
+							<p class="text-center text-danger fs-5">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+						</th:block>
+						<th:block th:if="${param.logout}">
+							<p class="text-center text-success fs-5">Logout Successfully</p>
+						</th:block>
+						<!-- Success Message -->
+						<th:block th:if="${session.successMsg}">
+							<p class="mt-2 text-success text-center fw-bold text-primary">[[${session.successMsg}]]</p>
+							<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+						</th:block>
+					</div>
+					<form action="/login" method="post">
+						<div class="mb-3">
+							<label class="form-label fw-semibold">Email</label>
+							<div class="input-group">
+								<span class="input-group-text bg-white"><i
+									class="fas fa-envelope"></i></span> <input type="email"
+									class="form-control" name="username"
+									placeholder="Enter your email" required>
+							</div>
+						</div>
+						<div class="mb-3">
+							<label class="form-label fw-semibold">Password</label>
+							<div class="input-group">
+								<span class="input-group-text bg-white"><i
+									class="fas fa-lock"></i></span> <input type="password"
+									class="form-control" name="password"
+									placeholder="Enter your password" required>
+							</div>
+						</div>
+						<div
+							class="d-flex justify-content-between align-items-center mb-3">
+
+							<a href="/forgot-password" class="text-decoration-none">Forgot Password?</a>
+						</div>
+						<button type="submit" class="btn btn-custom w-100 py-2">Login</button>
+					</form>
+					<div class="text-center mt-3">
+						<p class="mb-0 text-dark-custom">
+							Don't have an account? <a href="/register"
+								class="text-decoration-none fw-bold" style="color: #007bff;">Sign
+								up</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

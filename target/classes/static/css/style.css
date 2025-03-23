@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+.card-sh {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-div {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+
+/* Admin Index Css */
+.card-custom {
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	background: #fff;
+	color: #333;
+}
+
+.card-custom:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-container {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-body i {
+	color: #007bff;
+}
+
+.card-body p {
+	color: #333;
+}
+/* Admin Index Css End*/
+
+/* Log in Css Start */
+.login-container {
+	max-width: 900px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.login-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f8f9fa;
+}
+
+.form-control {
+	border-radius: 20px;
+}
+
+.btn-custom {
+	background: #007bff;
+	border: none;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+
+.btn-custom:hover {
+	background: #0056b3;
+}
+
+.form-check-input:checked {
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.text-dark-custom {
+	color: #343a40 !important;
+}
+/* Login Css End  */
+
+/* Add Product Css */
+.card-sh {
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+	background: #007bff;
+	border: none;
+	border-radius: 25px;
+	transition: 0.3s;
+}
+
+.btn-custom:hover {
+	background: #0056b3;
+}
+
+.form-control {
+	border-radius: 10px;
+}
+
+/* Add Product Css End */
+
+
+.error{
+	color:red;
+}
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* About Section */
+.about {
+    background: url('img/background.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Content Layout */
+.about .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Profile Image */
+.profile {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #ffcc00;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+/* About Text */
+.about-text {
+    flex: 2;
+    max-width: 600px;
+    padding: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Heading Style */
+.about-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Paragraph Style */
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+/* Animated Button */
+.about .btn {
+    background: #ffcc00;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(255, 204, 0, 0.5);
+    animation: bounce 2s infinite;
+}
+
+.about .btn:hover {
+    background: #ff9900;
+    box-shadow: 0px 5px 15px rgba(255, 153, 0, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

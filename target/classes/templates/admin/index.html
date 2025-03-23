@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+
+
+</head>
+<body>
+	<section class="dashboard-container"
+		style="background: linear-gradient(135deg, #007bff, #6610f2); color: #fff;">
+		<div class="container p-5">
+			<p class="text-center fs-1 fw-bold text-light">Admin Dashboard</p>
+			<div class="row g-4">
+				<div class="col-md-4">
+					<a href="/admin/loadAddProduct" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-cart-plus fa-3x"></i>
+								<p class="fs-4 fw-bold">Add Product</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="/admin/category" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-folder-plus fa-3x text-warning"></i>
+								<p class="fs-4 fw-bold">Add Category</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="/admin/products" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-boxes-stacked fa-3x text-success"></i>
+								<p class="fs-4 fw-bold">View Product</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="/admin/orders" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-truck fa-3x text-danger"></i>
+								<p class="fs-4 fw-bold">Orders</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="/admin/users?role=ROLE_USER" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-users fa-3x text-primary"></i>
+								<p class="fs-4 fw-bold">Users</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="/admin/users?role=ROLE_ADMIN" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-users fa-3x text-primary"></i>
+								<p class="fs-4 fw-bold">Admins</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="/admin/add-admin" class="text-decoration-none">
+						<div class="card card-custom text-center">
+							<div class="card-body">
+								<i class="fa-solid fa-user-shield fa-3x text-info"></i>
+								<p class="fs-4 fw-bold">Add Admin</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
